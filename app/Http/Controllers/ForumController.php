@@ -11,8 +11,15 @@ class ForumController extends Controller
     public function index(Support $support)
     {
 
+        // $supports = $support->all();
+        // dd($supports);
+
+        // return view('index', [
+        //     'supports' => $supports
+        // ]);
+
         $supports = $support->all();
-        dd($supports);
-        return view('index');
+
+        return view('index', compact('supports'));
     }
 }
