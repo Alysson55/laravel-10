@@ -11,6 +11,9 @@ class ForumController extends Controller
     public function index(Support $support)
     {
 
+
+
+
         // $supports = $support->all();
         // dd($supports);
 
@@ -19,7 +22,8 @@ class ForumController extends Controller
         // ]);
 
         $supports = $support->all();
+        // dd($supports);
 
-        return view('index', compact('supports'));
+        return view('/site/index', compact('supports',));
     }
 }

@@ -11,15 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Schema::create('curso_laravels', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->timestamps();
-        // });
-        Schema::create('supports', function (Blueprint $table) {
+        Schema::create('curso_laravels', function (Blueprint $table) {
             $table->id();
-            $table->string('subject');
-            $table->enum('status', ['a', 'p', 'c']);
-            $table->text('body');
             $table->timestamps();
         });
     }

@@ -1,4 +1,7 @@
 <h1>Listagem dos Suportes</h1>
+{{--
+{{ $xss }} --}}
+
 
 <table>
     <thead>
@@ -21,3 +24,7 @@
         @endforeach
     </tbody>
 </table>
+
+@foreach($supports as $support)
+{{ $support->subject }}
+@endforeach
