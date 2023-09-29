@@ -2,6 +2,8 @@
 {{--
 {{ $xss }} --}}
 
+<a href="{{  route('support.create')  }}">Criar Duvida</a>
+
 
 <table>
     <thead>

@@ -10,10 +10,6 @@ class ForumController extends Controller
 {
     public function index(Support $support)
     {
-
-
-
-
         // $supports = $support->all();
         // dd($supports);
 
@@ -26,4 +22,25 @@ class ForumController extends Controller
 
         return view('/site/index', compact('supports',));
     }
+
+    public function create()
+    {
+        return view ('/site/create');
+    }
+
+    public function store(Request $request, Support $support)
+    {
+        $data = $request->all();
+        $data['status'] =  'a';
+
+        $support = $support->create($data);
+        dd($support);
+
+        // // dd($request->only(['token' , 'body']));
+        // // dd($request->body);
+        // dd($request->get('sbc'));
+
+    }
+
+
 }
