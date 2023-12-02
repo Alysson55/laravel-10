@@ -1,7 +1,7 @@
 <h1>Nova Rota</h1>
 
 
-<form action="{{  route('support.store')  }}" method="POST">
+<form action="{{  route ('support.store')  }}" method="POST">
     {{-- <input type="text" value="{{  csrf_token()  }}" name="token"> --}}
 
     @csrf

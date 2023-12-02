@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateSupport;
 use Illuminate\Http\Request;
-use App\Http\Controllers\ForumController;
 use App\Models\Support;
 
 class ForumController extends Controller
@@ -28,16 +28,19 @@ class ForumController extends Controller
         return view ('/site/create');
     }
 
-    public function store(Request $request, Support $support)
+    public function store(StoreUpdateSupport $request)
     {
         $data = $request->all();
         $data['status'] =  'a';
 
-        $support = $support->create($data);
+        $support = Support::create($data);
         dd($support);
 
-        // // dd($request->only(['token' , 'body']));
-        // // dd($request->body);
+        // $support = $Support->create($data);
+        // dd($support);
+
+        // dd($request->only(['token' , 'body']));
+        // dd($request->body);
         // dd($request->get('sbc'));
 
     }
