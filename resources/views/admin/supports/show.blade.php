@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+<!-- @extends('admin.layouts.app')
 
 @section('title', "Detalhes da Dúvida {$support->subject}")
 
@@ -19,4 +19,22 @@
     <button type="submit" class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Deletar</button>
 </form>
 
-@endsection
+@endsection -->
+
+
+<h1>Detalhes da Duvida {{ $support->id}}</h1>
+
+<ul>
+    <li>Assunto: {{$support->subject}}</li>
+    <li>Status: {{$support->status}}</li>
+    <li>descricao: {{$support->body}}</li>
+</ul>
+
+
+
+
+
+
+
+
+

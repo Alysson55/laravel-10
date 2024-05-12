@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('site/contact');
 // });
 
-Route::post('/support', [ForumController::class, 'store'])->name('support.store');
-
 Route::get('/support/create', [ForumController::class, 'create'])->name('support.create');
+
+Route::get('/support/{id}', [ForumController::class, 'show'])->name('support.show');
+
+Route::post('/support', [ForumController::class, 'store'])->name('support.store');
 
 Route::get('/support', [ForumController::class, 'index'])->name('index');
 
