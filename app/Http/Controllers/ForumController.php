@@ -32,7 +32,7 @@ class ForumController extends Controller
         }
         // dd($support->subject);
 
-        return view('/support/show', compact('support'));
+        return view('admin/supports/show', compact('support'));
         
     }
 
