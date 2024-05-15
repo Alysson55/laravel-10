@@ -20,6 +20,7 @@
             <td>{{  $support->body  }}</td>
             <td>
                 <a href="{{ route('support.show', $support->id) }}">ir</a>
+                <a href="{{ route('support.edit', $support->id) }}">Editar</a>
             </td>
         </tr>
 

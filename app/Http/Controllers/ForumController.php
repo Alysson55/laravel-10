@@ -46,5 +46,14 @@ class ForumController extends Controller
        
     }
 
+    public function edit(Support $support, string|int $id)
+    {
+        if(!$support = $support->where('id', $id)->first()) {
+            return back();
+        }
+
+        return view('admin/supports.edit', compact('support'));
+    }
+
 
 }
